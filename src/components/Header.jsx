@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 const Header = () => {
     const links = [
         {
-            name: "Home", to: "/"
+            name: "Home", to: "/impactmindz-tech"
         },
         {
             name: "About", to: "about"

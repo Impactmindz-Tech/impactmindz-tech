@@ -1,17 +1,24 @@
 import { AppBar, Box, Container } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import logo from '../assets/Untitled_design__1_-removebg-preview.png'
+import MenuIcon from '@mui/icons-material/Menu';
+import SidenavMobile from './SidenavMobile';
 
 const Header = () => {
+    const [navOpen, setNavOpen] = useState(false)
     const links = [
         {
-            name: "Home", to: "/impactmindz-tech"
+            name: "Home", to: "/"
         },
         {
             name: "About", to: "about"
         },
         {
             name: "Service", to: "service"
+        },
+        {
+            name: "Contact", to: "contact"
         },
     ]
     return (
@@ -20,9 +27,9 @@ const Header = () => {
                 <Container>
                     <Box display='flex' justifyContent='space-between'>
                         <div className='text-4x'>
-                            <img src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.cf81d1a9.png&w=256&q=75" alt="" />
+                            <img className='w-16 h-12' src={logo} alt="company logo" />
                         </div>
-                        <nav className='flex'>
+                        <nav className='flex md:hidden'>
                             <ul className='flex items-center justify-between gap-4'>
                                 {
                                     links.map((item, i) => (
@@ -33,9 +40,13 @@ const Header = () => {
                                 }
                             </ul>
                         </nav>
+                        <div className='hamburger' onClick={() => setNavOpen(true)}>
+                            <MenuIcon />
+                        </div>
                     </Box>
                 </Container>
             </header>
+                <SidenavMobile navOpen={navOpen} setNavOpen={setNavOpen} />
         </>
     )
 }

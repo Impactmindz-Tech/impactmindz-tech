@@ -49,7 +49,7 @@ const Services = () => {
                     <div className='flex flex-wrap justify-center pt-4 gap-5'>
                         {
                             service.map((item, i) => (
-                                <div key={i} className='box-shadow bg-white transition-all hover:-translate-y-1 pt-4 p-3 w-[23.69%]'>
+                                <div key={i} className='box-shadow bg-white transition-all hover:-translate-y-1 pt-4 p-3 md:w-full w-[23.69%]'>
                                     <div className='text-right'>
                                         <ArrowOutwardIcon className='text-blue-500 text-3xl' />
                                     </div>

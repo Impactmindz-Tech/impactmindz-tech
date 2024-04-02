@@ -67,7 +67,7 @@ const Skills = () => {
                         <div className='flex flex-wrap justify-center gap-5 pt-9'>
                             {
                                 skill.map((item, i) => (
-                                    <div key={i} className='relative bg-blue-100 rounded-full w-[20%] md:w-[33%]'>
+                                    <div key={i} className='relative bg-blue-100 rounded-full w-[20%] sm:w-full md:w-[33%]'>
                                         <div className='flex justify-center gap-3 items-center px-9 py-6'>
                                             <img width='30px' src={item.src} alt="bootstrap" />
                                             <p className=' font-semibold text-lg text-center' key={i}>{item.name}</p>
@@ -80,7 +80,7 @@ const Skills = () => {
                         <div className='flex flex-wrap justify-center gap-5 pt-9'>
                             {
                                 skillTwo.map((item, i) => (
-                                    <div key={i} className='relative bg-blue-100 rounded-full w-[20%]'>
+                                    <div key={i} className='relative bg-blue-100 rounded-full w-[20%] sm:w-full md:w-[33%]'>
                                         <div className='flex justify-center gap-3 items-center px-9 py-6'>
                                             <img width='30px' src={item.src} alt="bootstrap" />
                                             <p className=' font-semibold text-lg text-center' key={i}>{item.name}</p>

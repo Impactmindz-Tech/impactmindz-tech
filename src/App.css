@@ -15,7 +15,7 @@ body {
   overflow-x: hidden;
 }
 
-.hero-sec {
+.hero-sec-home {
   /* background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://img.freepik.com/free-photo/system-developers-analyzing-code-wall-screen-tv-looking-errors-while-team-coders-collaborate-artificial-intelligence-project-programmers-working-together-machine-learning-software_482257-41819.jpg?size=626&ext=jpg'); */
   background-color: #f3f5ff;
   padding-top: 272px;
@@ -140,9 +140,49 @@ p {
   animation: waves 3s linear infinite;
 }
 
-.slick-slide{
+.slick-slide {
   padding: 10px;
 }
-.slick-slide img{
+
+.slick-slide img {
   border-radius: 10px;
+}
+
+.shadow-contact {
+  box-shadow: 0 4px 24px 0 rgba(19, 33, 110, .25);
+}
+
+
+.hamburger{
+  display: none;
+}
+
+@media (max-width:767px) {
+  .hero-sec-home {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h3{
+    font-size: 25px;
+  }
+
+  .hero-sec {
+    padding: 40px 0 40px;
+    /* margin-top: 80px; */
+  }
+  .video-btn:before{
+    width: 90px;
+    height: 90px;
+  }
+  .video-btn:after{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
 }

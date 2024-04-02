@@ -22,11 +22,11 @@ const About = () => {
                     </div>
                 </Container>
             </section>
-            <section className='-mt-52'>
+            <section className='-mt-52 md:mt-8'>
                 <Container>
                     <div className='relative'>
                         <img className='rounded-xl' src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout-video-illustration.0c7bebe2.png&w=1920&q=75" alt="" />
-                        <div className='video-btn relative bg-white p-8 rounded-full'>
+                        <div className='video-btn relative bg-white p-8 md:p-3 rounded-full'>
                             <Link to='https://www.youtube.com/watch?v=LCihLrSehCo' target='_blank'><PlayArrowIcon fontSize='large' /></Link>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const About = () => {
                             <p>Our mission is to empower the world to build wealth through modern real estate investing.</p>
                         </div>
 
-                        <div className='flex justify-between'>
+                        <div className='flex justify-between flex-wrap'>
                             <div className='flex gap-4 mt-12 items-center'>
                                 <img src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finvestors.41071d6a.png&w=128&q=75" alt="" />
                                 <div className='flex flex-col'>

@@ -9,7 +9,7 @@ const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
     const links = [
         {
-            name: "Home", to: "impactmindz-tech"
+            name: "Home", to: "/"
         },
         {
             name: "About", to: "about"
@@ -27,17 +27,17 @@ const Header = () => {
                 <Container>
                     <Box display='flex' justifyContent='space-between'>
                         <div className='text-4x'>
-                            <img className='w-16 h-12' src={logo} alt="company logo" />
+                            <Link to='/'>
+                                <img className='w-16 h-12' src={logo} alt="company logo" />
+                            </Link>
                         </div>
                         <nav className='flex md:hidden'>
                             <ul className='flex items-center justify-between gap-4'>
-                                {
-                                    links.map((item, i) => (
-                                        <NavLink key={i} to={item.to}>
-                                            <li >{item.name}</li>
-                                        </NavLink>
-                                    ))
-                                }
+                                {links.map((item, i) => (
+                                    <li key={i}>
+                                        <NavLink to={item.to}>{item.name}</NavLink>
+                                    </li>
+                                ))}
                             </ul>
                         </nav>
                         <div className='hamburger' onClick={() => setNavOpen(true)}>
@@ -46,7 +46,7 @@ const Header = () => {
                     </Box>
                 </Container>
             </header>
-                <SidenavMobile navOpen={navOpen} setNavOpen={setNavOpen} />
+            <SidenavMobile navOpen={navOpen} setNavOpen={setNavOpen} />
         </>
     )
 }

@@ -9,15 +9,13 @@ import Contact from '../page/Contact'
 
 const Routing = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/impactmindz-tech">
       <Header />
       <Routes>
-        <Route path='/'>
-          <Route path='/impactmindz-tech' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/service' element={<Service />} />
-          <Route path='/Contact' element={<Contact />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>

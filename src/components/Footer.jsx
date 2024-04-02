@@ -1,8 +1,6 @@
 import { Container } from '@mui/material'
 import React from 'react'
 import EmailSubscribe from './EmailSubscribe'
-import { footerLinks } from '../data/FooterLinks'
-import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/Untitled_design__1_-removebg-preview.png'
 
 

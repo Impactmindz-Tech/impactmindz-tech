@@ -1,8 +1,5 @@
 import React from 'react'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Container } from '@mui/material';
-import { Link } from 'react-router-dom';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 
 const Contact = () => {

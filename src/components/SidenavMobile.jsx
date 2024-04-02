@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 const SidenavMobile = ({ navOpen, setNavOpen }) => {
     const links = [
         {
-            name: "Home", to: "impactmindz-tech"
+            name: "Home", to: "/"
         },
         {
             name: "About", to: "about"

@@ -1,9 +1,27 @@
-import {  Container } from '@mui/material'
-import React from 'react'
+import { Container } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 import Skills from '../components/Skills'
 import Services from '../components/Services'
+import { useInView } from 'react-intersection-observer'
 
 const Home = () => {
+  const [counter, setCounter] = useState(0);
+    const [ref, inView] = useInView();
+  
+    useEffect(() => {
+      if (inView) {
+        const interval = setInterval(() => {
+          if (counter < 400) {
+            setCounter(prevCounter => prevCounter + 1);
+          } else {
+            clearInterval(interval);
+          }
+        }, 1);
+        
+        return () => clearInterval(interval);
+      }
+    }, [counter, inView]);
+  
   return (
     <>
       <section className='hero-sec-home'>
@@ -29,54 +47,56 @@ const Home = () => {
       <section className='mt-12 bg-blue-100 p-10'>
         <Services />
       </section>
-      <section className='mt-12'>
-        <Container>
-          <div className='flex md:flex-wrap items-center'>
-            <div className='w-1/2 md:w-full'>
-              <h5>With Revest anyone can invest!</h5>
-              <h1>Numbers Said More Than Words</h1>
-              <p>our low minimums give you the flexibility to invest the right amount, at the right time, to meet your goals.</p>
-            </div>
-
-            <div className='w-1/2 md:pt-5 flex md:flex-wrap md:w-full items-center gap-8'>
-              <div className='w-1/2 md:w-full  md:flex-wrap flex flex-col gap-8'>
-                <div className='box-overlay rounded-xl py-10 px-5  hover:-translate-y-2 transition-all'>
-                  <figure className='flex justify-center'>
-                    <img className='rounded-full ' src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplatforms.c9d53e8d.png&w=128&q=75" alt="" />
-                  </figure>
-                  <div className='pt-6 text-center'>
-                    <span className='text-4xl text-blue-900 font-semibold mt-'>3000+</span>
-                    <p className='pt-2'>Investors Using Platform</p>
-                  </div>
-                </div>
-
-                <div className='box-overlay  rounded-xl py-10 px-5 hover:-translate-y-2 transition-all'>
-                  <figure className='flex justify-center'>
-                    <img className='rounded-full' src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplatforms.c9d53e8d.png&w=128&q=75" alt="" />
-                  </figure>
-                  <div className='pt-6 text-center'>
-                    <span className='text-4xl text-blue-900 font-semibold mt-'>18%</span>
-                    <p className='pt-2'>Returns upto</p>
-                  </div>
-                </div>
+      
+        <section className='mt-12' ref={ref} >
+          <Container>
+            <div className='flex md:flex-wrap items-center'>
+              <div className='w-1/2 md:w-full'>
+                <h5>With Revest anyone can invest!</h5>
+                <h1>Numbers Said More Than Words</h1>
+                <p>our low minimums give you the flexibility to invest the right amount, at the right time, to meet your goals.</p>
               </div>
 
-              <div className='w-1/2 md:w-full  md:flex-wrap flex flex-col gap-4 hover:-translate-y-2 transition-all'>
-                <div className='box-overlay rounded-xl py-10 px-5'>
-                  <figure className='flex justify-center'>
-                    <img className='rounded-full' src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplatforms.c9d53e8d.png&w=128&q=75" alt="" />
-                  </figure>
-                  <div className='pt-6 text-center'>
-                    <span className='text-4xl text-blue-900 font-semibold mt-'>45</span>
-                    <p className='pt-2'>Years Experience</p>
+              <div className='w-1/2 md:pt-5 flex md:flex-wrap md:w-full items-center gap-8'>
+                <div className='w-1/2 md:w-full  md:flex-wrap flex flex-col gap-8'>
+                  <div className='box-overlay rounded-xl py-10 px-5  hover:-translate-y-2 transition-all'>
+                    <figure className='flex justify-center'>
+                      <img className='rounded-full ' src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplatforms.c9d53e8d.png&w=128&q=75" alt="" />
+                    </figure>
+                    <div className='pt-6 text-center'>
+                      <span className='text-4xl text-blue-900 font-semibold mt-'>{counter} 3000+</span>
+                      <p className='pt-2'>Investors Using Platform</p>
+                    </div>
+                  </div>
+
+                  <div className='box-overlay  rounded-xl py-10 px-5 hover:-translate-y-2 transition-all'>
+                    <figure className='flex justify-center'>
+                      <img className='rounded-full' src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplatforms.c9d53e8d.png&w=128&q=75" alt="" />
+                    </figure>
+                    <div className='pt-6 text-center'>
+                      <span className='text-4xl text-blue-900 font-semibold mt-'>18%</span>
+                      <p className='pt-2'>Returns upto</p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
+                <div className='w-1/2 md:w-full  md:flex-wrap flex flex-col gap-4 hover:-translate-y-2 transition-all'>
+                  <div className='box-overlay rounded-xl py-10 px-5'>
+                    <figure className='flex justify-center'>
+                      <img className='rounded-full' src="https://real-estate-sable-pi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplatforms.c9d53e8d.png&w=128&q=75" alt="" />
+                    </figure>
+                    <div className='pt-6 text-center'>
+                      <span className='text-4xl text-blue-900 font-semibold mt-'>45</span>
+                      <p className='pt-2'>Years Experience</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
-          </div>
-        </Container>
-      </section>
+          </Container>
+        </section>
+      
     </>
   )
 }

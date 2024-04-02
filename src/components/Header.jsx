@@ -9,10 +9,10 @@ const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
     const links = [
         {
-            name: "Home", to: "/"
+            name: "Home", to: "/impactmindz-tech"
         },
         {
-            name: "About", to: "about"
+            name: "About", to: "/about"
         },
         {
             name: "Service", to: "service"

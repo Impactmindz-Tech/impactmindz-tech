@@ -12,12 +12,12 @@ const Routing = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        {/* <Route path='/'> */}
-          <Route path='/' element={<Home />} />
+        <Route path='/'>
+          <Route path='/impactmindz-tech' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/service' element={<Service />} />
           <Route path='/Contact' element={<Contact />} />
-        {/* </Route> */}
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>

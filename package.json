@@ -1,7 +1,7 @@
 {
   "homepage": "https://impactmindz-tech.github.io/impactmindz-tech",
   "name": "impactmindz-app",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-sec {
+  /* background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://img.freepik.com/free-photo/system-developers-analyzing-code-wall-screen-tv-looking-errors-while-team-coders-collaborate-artificial-intelligence-project-programmers-working-together-machine-learning-software_482257-41819.jpg?size=626&ext=jpg'); */
+  background-color: #f3f5ff;
+  padding-top: 272px;
+  padding-bottom: 160px;
+  background-color: #f4f6ff;
+  background-size: contain;
+  background-position: left top 60px;
+}
+
+h1 {
+  font-size: 76px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #13216e;
+  font-style: normal;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #4e0dff;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #13216e;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 57px;
+  font-weight: 700;
+  color: #13216e;
+  font-style: normal;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #13216e;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.box-overlay {
+  box-shadow: 0 4px 24px 0 rgba(19, 33, 110, .25);
+}
+
+.box-shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.footer {
+  background-color: #1e263a;
+}
+
+.hero-sec {
+  background-image: url('https://real-estate-sable-pi.vercel.app/_next/static/media/banner-bg.1d5494b1.png');
+  padding: 96px 0 295px;
+  background-color: #93abf0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  margin-top: 80px;
+}
+
+.video-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -50%) scale(.5);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(.5);
+    opacity: 0;
+  }
+}
+
+.video-btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: hsla(0, 0%, 100%, .376);
+  border-radius: 50%;
+  z-index: -1;
+  animation: waves 3s linear infinite;
+  animation-delay: .4s;
+}
+
+.video-btn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  background-color: hsla(0, 0%, 100%, .376);
+  border-radius: 50%;
+  z-index: -1;
+  animation: waves 3s linear infinite;
+}
+
+.slick-slide{
+  padding: 10px;
+}
+.slick-slide img{
+  border-radius: 10px;
+}

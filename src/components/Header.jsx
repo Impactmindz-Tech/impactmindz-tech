@@ -23,7 +23,7 @@ const Header = () => {
     ]
     return (
         <>
-            <header className='p-4 py-5 fixed top-0 w-full bg-blue-100 z-10'>
+            <header className='p-4 py-5 fixed top-0 w-full bg-blue-100 z-10 box-shadow'>
                 <Container>
                     <Box display='flex' justifyContent='space-between'>
                         <div className='text-4x'>
